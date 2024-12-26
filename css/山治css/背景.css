@@ -1,0 +1,12 @@
+.sz_bg{
+    width: 100%;
+    max-width: 2400px;
+    /* background-color: aqua; */
+    margin: auto;
+}
+.sz_bg img{
+    width: 100%;
+    margin-top: 50px;
+    height: 1200px;
+    object-fit: cover;
+}

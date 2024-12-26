@@ -1,0 +1,45 @@
+/* 联系表单样式 */
+.services {
+    padding: 100px 20px;
+    background-color: #f3f4f6;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background-color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #2563eb;
+}
+
+.service-subtitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+}

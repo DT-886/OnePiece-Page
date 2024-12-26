@@ -1,0 +1,101 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* 盒子 */
+.sz_box{
+    width: 1200px;
+    /* height: 500px; */
+    /* background-color: aquamarine; */
+}
+.sz_title{
+    /* width: 430px; */
+    /* background-color: chartreuse; */
+    display: flex;
+    justify-content: left;
+    margin: auto;
+}
+.zs_title{
+    height: 40px;
+    /* background-color: chartreuse; */
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.sz_line{
+    width: 130px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    /* background-color: blue; */
+    border-bottom: 1px solid rgb(60, 59, 59);
+}
+.zs_title p{
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(66, 64, 64);
+    text-align: right;
+}
+.sz_list{
+    width: 1500px;
+    /* border: 2px solid; */
+    margin-left: -5px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none; 
+}
+.sz_icon_left img,.sz_icon_right img{
+    width: 30px;
+}
+.sz_move{
+    transform: translateX(-300px);
+}
+
+/* 图片及文字 */
+.sz_item img{
+    width: 220px;
+    height:300px;
+    object-fit: cover;
+}
+.sz_item{
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(83, 83, 83);
+}
+.sz_item h3{
+    font-size: 22px;
+    margin: 10px;
+}
+.sz_item p{
+    font-size: 16px;
+    padding: 0px 10px;
+    line-height: 1.8;
+}
+
+/* 按钮 */
+.sz_icon_left,.sz_icon_right{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(245, 7, 47, 0.8);
+    border-radius: 360px;
+    color: aliceblue;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sz_icon_left{
+    left: 0px;
+}
+.sz_icon_right{
+    right: 0px;
+}
+
+/* 对应按钮选中时,按钮的样式 */
+.sz_icon_left.active,.sz_icon_right.active{
+    background-color: rgba(235, 232, 232, 0.5);
+}

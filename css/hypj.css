@@ -1,0 +1,7 @@
+
+*{margin: 0;padding: 0;}
+ul{list-style-type: none;}
+#main{background: white;overflow: hidden;}
+#main li{width: 350px;float: left;margin: 5px 14px;border: 1px solid lightgrey;padding: 5px;box-shadow: 5px 5px 5px lightgrey;text-align: center;position: relative;}
+#main li span{position: absolute;left: 5px;top: 100px;width: 350px;line-height: 50px;background: rgba(0,0,0,0.5);color: white;display: none;}
+#main li:hover span{display: block;}

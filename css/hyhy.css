@@ -1,0 +1,10 @@
+.left{float: left;width:200px}
+#footer{clear: both;}
+.green{color: green;font-size: 20px;}
+.right{float: left;width: 550px;padding-left: 20px;}
+.you{float: right;width: 200px;}
+#left{width: 820px;overflow: hidden;}
+#right{float: right;width: 350px;border-left: 3px dashed green;padding-left: 20px;}
+.biao{font-size: 20px;font-weight: bolder;border-left:15px solid green;padding-left: 15px;}
+.xx{border: 1px green solid;padding: 2px;margin-left: 360px;}
+.cc{clear: both;border-bottom: 2px dashed lightgrey;width: 770px;}

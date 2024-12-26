@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.jieshao{
+    width: 1200px;
+    display: flex; 
+    margin: 0 auto;
+    /* align-items: center;  */
+}
+.js_img{
+    width: 300px;
+    height: 200px;
+    margin-top: 10px;
+    /* margin-left: 40px; */
+    /* background-color: lightsalmon; */
+}
+.js_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.js_text{
+    width: 1000px;
+    height: 200px;
+    margin-left: 50px;
+    font-size: 15px;
+    /* background-color: lightcyan; */
+    text-indent: 28px;
+    overflow: hidden;
+}
+.js_title{
+    font-weight: bold;
+    color: brown;
+    margin-left: -10px;
+}
+.jieshao{
+    overflow: hidden;
+}
