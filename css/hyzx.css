@@ -1,9 +1,0 @@
-#main  li{background:url(../img/list.png)no-repeat 0 center;padding-left: 20px;line-height: 30px;font-size: 15px;margin-top: 2px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
-*{margin: 0;padding: 0;}
-ul{list-style-type: none;}
-#bo img{margin: 20px 10px 10px;clear: both;}
-#bo p{margin-top: 30px;}
-#left{width: 820px;overflow: hidden;}
-#right{float: right;width: 350px;border-left: 3px dashed green;padding-left: 20px;}
-.you{float: right;}
-#right img{margin-top: 10px;}
