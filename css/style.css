@@ -7,7 +7,7 @@
 #main img{margin: 20px;}
 *{margin: 0;padding: 0;}
 #banner ul{list-style-type: none;}
-#banner li{background: url(../img/libg.png)no-repeat 0 center;padding-left: 20px;line-height: 20px;font-size: 15px;margin-top: 2px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+#banner li{background: url(http://cdn.psdhtml.cn/arrow_01.gif)no-repeat 0 center;padding-left: 20px;line-height: 20px;font-size: 15px;margin-top: 2px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .box01,.box02,.box03{
 			float: left;
 			width:320px;

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>海贼王</title>
+    <link rel="stylesheet" href="../css/最新资讯.css">
+    <link rel="stylesheet" href="../css/路飞导航.css">
+    <link rel="stylesheet" href="../css/轮播图1.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/新漫速看.css">
+    <link rel="stylesheet" href="../css/其他.css">
+    <script type="" src="../js/index.js"></script>
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    <script src="../js/index.js"></script>
+    <style>
+    * {
+		margin: 0;
+        padding: 0;
+    }
+    .yy{
+		height: 20px;
+		position: relative;
+		top: 55px;
+		left: -230px;
+	}
+    </style>
+</head>
+<body>
+   <div class="menus menus1">
+      <h1>海贼王</h1>
+      <ul>
+        <div class="bg"></div>
+            <li><span><a href="../html/index.html" target="blank">首页</a></span></li>
+			<li><span><a href="https://www.xiaohongshu.com/explore" target="blank">常态</a></span></li>
+            <li><span><a href="https://www.xiaohongshu.com/explore" target="blank">一档</a></span></li>
+            <li><span><a href="https://www.xiaohongshu.com/explore" target="blank">二档</a></span></li>
+            <li><span><a href="https://www.xiaohongshu.com/explore" target="blank">三档</a></span></li>
+            <li><span><a href="https://www.xiaohongshu.com/explore" target="blank">四档</a></span></li>
+            <li><span><a href="https://www.xiaohongshu.com/explore" target="blank">五档</a></span></li> 
+        </ul>
+        <div class="clear"></div>
+    </div>
+<div class="banenr">
+  <div class="banner-bg">
+    <h3>船长:草帽路飞</h3>
+	<audio src="../yiy/安室奈美恵 - Hope.ogg" controls class="yy"></audio>
+  </div>
+</div>
+<!-- 轮播图开始 -->
+<div class="slider">
+<div class="slider1">
+	<div class="carousel">
+        <div class="slides">
+            <img src="../images/index/唐凯豪，路飞五档.jpg">
+            <img src="../images/index/唐凯豪，路飞四档.jpg">
+            <img src="../images/index/唐凯豪，路飞三档.jpg">
+            <img src="../images/index/唐凯豪，路飞二档.jpg">
+            <img src="../images/index/唐凯豪5.jpg">
+            <img src="../images/index/唐凯豪8.jpg">
+        </div>
+        <div class="buttons">
+            <button data-index="0">1</button>
+            <button data-index="1">2</button>
+            <button data-index="2">3</button>
+            <button data-index="3">4</button>
+            <button data-index="4">5</button>
+            <button data-index="5">6</button>
+        </div>
+        <div class="slide-left"><svg t="1731398663229" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4982" width="32" height="32"><path d="M769.137778 153.372444L444.984889 512l324.152889 358.684444c36.408889 35.043556 36.408889 91.989333 0 126.976a95.744 95.744 0 0 1-131.868445 0l-377.571555-417.678222c-1.536-1.365333-3.584-1.877333-5.063111-3.299555A87.438222 87.438222 0 0 1 227.555556 512c-0.341333-23.324444 8.533333-46.876444 27.079111-64.739556 1.479111-1.422222 3.527111-1.934222 5.063111-3.185777L637.269333 26.339556a95.744 95.744 0 0 1 131.868445 0c36.408889 35.043556 36.408889 91.932444 0 127.032888z" fill="#1296db" p-id="4983"></path></svg></div>
+        <div class="slide-right"><svg t="1731398710015" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5386" width="32" height="32"><path d="M769.344174 576.738215c-1.47899 1.422105-3.469937 1.877179-5.062695 3.2424l-377.540513 417.700767a95.736128 95.736128 0 0 1-131.857603 0 87.487918 87.487918 0 0 1 0-127.022445L579.009601 512.003982 254.883363 153.349027a87.374149 87.374149 0 0 1 0-126.965561 95.62236 95.62236 0 0 1 131.857603 0l377.540513 417.700767c1.535874 1.308337 3.583705 1.820295 5.062695 3.2424 18.544253 17.861642 27.475074 41.297938 27.076885 64.677349 0.398189 23.379411-8.532632 46.87259-27.076885 64.734233z" fill="#1296db" p-id="5387"></path></svg></div>
+    </div>
+</div>
+<script >
+	var currentSlide = 0;
+	var slides = document.querySelector('.slides');
+	var totalSlides = document.querySelectorAll('.slides img').length;
+	var buttons = document.querySelectorAll('.buttons button');
+	var slide_left=document.querySelector('.slide-left')
+	var slide_right=document.querySelector('.slide-right')
+	var intervalId; // 定义 intervalId 作为全局变量
+	// 显示幻灯片
+   function showSlide(index) {
+	// 更新 currentSlide 变量，设置为新的幻灯片索引 index，以便跟踪当前显示的幻灯片。
+   currentSlide = index;
+   var offset = -index * 705;
+	// 使用 transform: translateX()来移动.slides` 容器，达到显示不同幻灯片的效果。
+   slides.style.transform = `translateX(${offset}px)`;
+   // 更新按钮的 active 类
+	// 首先移除所有按钮的 active 类，表示没有按钮是选中的。
+   buttons.forEach(button => button.classList.remove('active'));
+   if (index >= totalSlides) {
+	   buttons[0].classList.add('active');
+
+   }
+	else if (index < 0) {
+	   buttons[totalSlides - 1].classList.add('active');
+   } 
+   else {
+	   buttons[index].classList.add('active');
+   }
+}
+function nextSlide() {
+   currentSlide = (currentSlide + 1) % totalSlides;
+   showSlide(currentSlide);
+}
+function prevSlide() {
+		   currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+		   showSlide(currentSlide);
+	   }
+function startAutoSlide() {
+   // 只启动定时器如果它没有启动
+   if (!intervalId) {
+	   intervalId = setInterval(nextSlide, 5000);
+   }
+}
+
+// 停止自动切换幻灯片函数stopAutoSlide() 
+function stopAutoSlide() {
+   clearInterval(intervalId); // 停止定时器
+   intervalId = null; // 清除定时器ID，防止多次清除
+}
+
+// 初始化显示幻灯片并启动定时器
+showSlide(currentSlide);
+startAutoSlide();
+
+// 绑定按钮点击事件
+buttons.forEach(button => {
+   button.addEventListener('click', function () {
+	   stopAutoSlide(); // 停止定时器
+	   currentSlide = parseInt(this.getAttribute('data-index')); // 获取点击按钮的索引
+	   showSlide(currentSlide);//调用显示幻灯片函数
+	   startAutoSlide(); // 重新启动定时器
+   });
+   button.addEventListener('mouseover', function () {
+	   stopAutoSlide();
+	   currentSlide = parseInt(this.getAttribute('data-index'));
+	   showSlide(currentSlide);//调用显示幻灯片函数
+   });
+
+   button.addEventListener('mouseleave', function () {
+	   startAutoSlide();
+   });
+});
+slide_left.addEventListener('click', function () {
+		   stopAutoSlide();
+		   prevSlide();
+		   startAutoSlide();
+	   });
+slide_right.addEventListener('click', function () {
+		   stopAutoSlide();//鼠标悬停时停止自动轮播
+		   nextSlide();//调用切换到下一张函数
+		   startAutoSlide();//重新启动定时器
+	   });
+
+   </script>
+</div>
+</div>
+<!-- 轮播图结束 -->
+<!-- 最新资讯开始 -->
+<div class="travel1">
+	<div class="box-information">
+		<div class="new-information">5速 ルフィ</div>
+		<div class="more-information"><a href="" target="_blank" class="more-information" title="点击查看更多资讯">もっとその></a></div>
+	</div>
+	<div class="box-underline">
+		<div class="underline1"></div>
+		<div class="underline2"></div>
+	</div>
+	<div class="box-content">
+		<ul class="content">
+			<li><a href="" target="_blank">路飞的一生</a></li>
+			<li><a href="" target="_blank">路飞赏金变化历程</a></li>
+			<li><a href="" target="_blank">路飞的家人</a></li>
+			<li><a href="" target="_blank">路飞的伙伴</a></li>
+		</ul>
+	</div>
+</div>
+<div class="travel2">
+	<div class="box-information">
+		<div class="new-information">ルフィ</div>
+		<div class="more-information"><a href="" target="_blank" class="more-information" title="点击查看更多资讯">もっとその></a></div>
+	</div>
+	<div class="box-underline">
+		<div class="underline1"></div>
+		<div class="underline2"></div>
+	</div>
+	<div class="box-content">
+		<ul class="content">
+			<li><a href="" target="_blank">路飞的性格</a></li>
+			<li><a href="" target="_blank">路飞的敌人</a></li>
+			<li><a href="" target="_blank">路飞的战力排行与老师的战力排行榜单</a></li>
+			<li><a href="" target="_blank">路飞游历的地方</a></li>
+		</ul>
+	</div>
+</div>
+<hr/>
+<!-- 最新资讯结束 -->
+<!-- 路飞简短介绍开始 -->
+<div class="welcome-text">
+  <h1>かいぞくおうに、をれはなる&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 海贼王に俺はなる</h1>
+  <h3>&nbsp;</h3>
+  <h3>
+	蒙奇·D·路飞，日本漫画《航海王》及其衍生作品中的男主角，绰号“草帽”路飞，君临伟大航路的四位海上皇帝“四皇”之一。草帽一伙船长，旗下海贼团草帽大船团的大船长。两年前登陆香波地群岛的11位超新星的其中一位，同时也是极恶的世代的海贼之一。人人果实·幻兽种·尼卡形态能力者。悬赏金30亿贝里。
+	东海哥亚王国风车村出身，以成为海贼王，找到传说中的大秘宝（ONE PIECE）为目标而航行。路飞十分重视伙伴与朋友，对任何冒险相关的事物都超感兴趣。和其他传统的海贼所不同的是，他并不会为了追求财富而杀戮，而是享受着身为海贼的冒险和自由。 
+  </h3>
+</div>
+<!-- 路飞简短介绍结束 -->
+<!-- 路飞介绍开始 -->
+<div class="introduce">路飞称号</div>
+<div class="introduce-content">
+  <div id="img-introduce">
+	<img src="../images/index/唐凯豪，路飞2.jpg">
+  </div>
+  <div id="text-introduce" class="text-introduce">
+    <div class="text-introducce" id="text1">
+      <div class="text-box" id="text-box1"> ·草帽团长·</div>
+      <div class="text-box-right" id="box-right1">草帽团，由蒙奇·D·路飞所创立的海贼团，旗帜图案是戴着草帽的骷髅 。 </div>
+    </div>
+    <div class="text-introducce" id="text2">
+      <div class="text-box" id="text-box2"> ·四皇之一·</div>
+      <div class="text-box-right" id="box-right2">四皇，是“新世界”四个实力极其强大的海贼团或者四个海贼团船长的统称</div>
+    </div>
+    <div class="text-introducce" id="text3">
+      <div class="text-box" id="text-box3"> ·极恶世代·</div>
+      <div class="text-box-right" id="box-right-3"> 极恶的世代，成员包括在顶上战争前几日在香波地群岛登陆的悬赏过亿的11位超新星海贼和黑胡子。</div>
+    </div>
+    <div class="text-introducce" id="text4">
+      <div class="text-box" id="text-box4"> ·尼卡·</div>
+      <div class="text-box-right" id="box-right4"> 尼卡是艾尔巴夫传说中的解放战士，被世人尊称为“太阳神尼卡”</div>
+    </div>
+  </div>
+</div>
+<!-- 路飞介绍结束 -->
+<hr/>
+<!-- 路飞图片开始 -->
+<div class="ms-ex">
+<div class="ms-exhibition">
+  <p>草帽路飞图片</p>
+</div>
+  <div class="scroll">
+    <marquee direction="right" behavior="alternate" scrolldelay="200" onmouseover="stop()" onmouseout="start()">
+      <table width="2400" border="0" cellspacing="20"  cellpadding="0">
+        <tr>
+          <td class="scroll-td"><img src="../images/index/唐凯豪1.jpeg" style="width: 440px;height: 440px;"></td>
+          <td class="scroll-td"><img src="../images/index/唐凯豪2.jpg" style="width: 440px;height: 440px;"></td>
+          <td class="scroll-td"><img src="../images/index/唐凯豪3.jpg" style="width: 440px;height: 440px;"></td>
+          <td class="scroll-td"><img src="../images/index/唐凯豪4.jpg" style="width: 440px;height: 440px;"></td>
+          <td class="scroll-td"><img src="../images/index/唐凯豪5.jpg" style="width: 440px;height: 440px;"></td>
+          <td class="scroll-td"><img src="../images/index/唐凯豪6.jpeg" style="width: 440px;height: 440px;"></td>
+          <td class="scroll-td"><img src="../images/index/唐凯豪7.jpg" style="width: 440px;height: 440px;"></td>
+          <td class="scroll-td"><img src="../images/index/唐凯豪8.jpg" style="width: 440px;height: 440px;"></td>
+          <td class="scroll-td"><img src="../images/index/唐凯豪9.jpg" style="width: 440px;height: 440px;"></td>
+          <td class="scroll-td"><img src="../images/index/唐凯豪10.jpg" style="width: 440px;height: 440px;"></td>
+        </tr>
+      </table>
+    </marquee>
+  </div>
+</div> 
+</div>
+<!-- 路飞图片结束 -->
+<!-- 新漫速看模块儿开始 -->
+<div class="introduction w">
+	<div class="introduction-hd">
+		<h3>新漫速看</h3>
+		<a href="javascript:;" class="all">查看全部</a>
+	</div>
+	<div class="introduction-bd">
+		<ul>
+			<li>
+				<img src="../images/index/唐凯豪new.png" alt="" class="new">
+				<a href=""target="_blank">
+					<img src="../images/index/唐凯豪m996.jpg" alt=""></a>
+			</li>
+			<li>
+				<img src="../images/index/唐凯豪new.png" alt="" class="new">
+				<a href="" target="_blank">
+					<img src="../images/index/唐凯豪m995.jpg" alt=""></a>
+			</li>
+			<li>
+				<img src="../images/index/唐凯豪new.png" alt="" class="new">
+				<a href="" target="_blank">
+					<img src="../images/index/唐凯豪m994.jpg" alt=""></a>
+			</li>
+			<li>
+				<img src="../images/index/唐凯豪new.png" alt="" class="new">
+				<a href="" target="_blank">
+					<img src="../images/index/唐凯豪m993.jpg" alt=""></a>
+			</li>
+			<li>
+				<img src="../images/index/唐凯豪new.png" alt="" class="new">
+				<a href="" target="_blank">
+					<img src="../images/index/唐凯豪m991.jpg" alt=""></a>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- 新漫速看模块儿结束 -->
+<!-- 漫点网底部开始 -->
+ <div class="footer">
+	<div class="w">
+		<div class="left">
+			<img src="../images/index/唐凯豪海贼王图标.png" alt="">
+			<p>漫点看致力于为海迷们提供最新最好的海贼王资讯和视频。<br />
+				芝士泡泡糖 © 2024.保留所有权利。友情联系手机号 ********** -鲁ICP备1111111111号</p>
+			<a href="#" class="app">下载APP</a>
+		</div>
+		<div class="box-center6">
+			<div class="box-center116">www.hzwlf.com</div>
+			<div class="box-center16">
+				<table>
+					<tr>
+						<td><img src="../images/index/菱形.png" alt=""><a href="#" target="_blank"> 路飞状况&nbsp;&nbsp;&nbsp;</a></td>
+						<td><img src="../images/index/菱形.png" alt=""><a href="#" target="_blank"> 实力 过程 能力</a></td>
+					</tr>
+				</table>
+			</div>
+			<div class="box-center26">
+				<table>
+					<tr>
+						<td><img src="../images/index/菱形.png" alt=""><a href="#" target="_blank"> 实力展览&nbsp;&nbsp;&nbsp;</a></td>
+						<td><img src="../images/index/菱形.png" alt=""><a href="#" target="_blank"> 能力资讯&nbsp;&nbsp;&nbsp;</a></td>
+						<td><img src="../images/index/菱形.png" alt=""><a href="#" target="_blank"> 发现资讯</a></td>
+					</tr>
+					<tr>
+						<td><img src="../images/index/菱形.png" alt=""><a href="#" target="_blank"> paty&nbsp;&nbsp;&nbsp;</a></td>
+						<td><img src="../images/index/菱形.png" alt=""><a href="#" target="_blank"> 航海路线&nbsp;&nbsp;&nbsp;</a></td>
+						<td><img src="../images/index/菱形.png" alt=""><a href="#" target="_blank"> 发现岛屿</a></td>
+					</tr>
+					<tr>
+						<td><img src="../images/index/菱形.png" alt=""><a href="#" target="_blank"> 图片 视频&nbsp;&nbsp;</a></td>
+						<td><img src="../images/index/菱形.png" alt=""><a href="#" target="_blank"> 路飞成就&nbsp;&nbsp;&nbsp;</a></td>
+						<td><img src="../images/index/菱形.png" alt=""><a href="#" target="_blank"> 攻略贴士</a></td>
+					</tr>
+				</table>
+			</div>
+			<div class="box-center16"><img src="../images/index/菱形.png" alt=""><a href="#" target="_blank"> 新疆旅游局官方微博</a></div>
+		</div>
+</div>
+<!-- 漫点网底部结束 -->
+<footer>
+  <div id="footer">
+	<p>芝士泡泡糖 @tkh.com</p>
+			<p>版权所有芝士泡泡糖</p>	
+  </div>
+</footer>
+<div class="guide_box">
+	<div class="guide_title">
+		<div class="guide_line"></div>
+		<p>草帽路飞</p>
+		<div class="guide_line"></div>
+	</div>
+	<ul class="guide_list">
+		<li class="guide_item">
+			<div class="title">一档</div>
+			<a href="" target="_blank">
+			  <img src="../images/index/唐凯豪，路飞.jpg" alt="">
+			</a>
+			<div class="guide_text">
+					 <ul>
+						<li><a href="#" target="_blank">一档外貌</a></li>
+						<li><a href="#" target="_blank">一档战力</a></li>
+						<li><a href="#" target="_blank">一档时间</a></li>
+					</ul>
+					<ul>
+						<li><a href="#" target="_blank">一档外貌</a></li>
+						<li><a href="#" target="_blank">一档战力</a></li>
+						<li><a href="#" target="_blank">一档时间</a></li>
+					 </ul>
+			</div> 
+		 </li> 
+		 <li class="guide_item">
+			<div class="title">二档</div>
+			<a href="" target="_blank">
+			  <img src="../images/index/唐凯豪，路飞2档2.png" alt="">
+			</a>
+			<div class="guide_text" style="position: relative;">
+					<ul>
+						<li><a href="#" target="_blank">二档外貌</a></li>
+						<li><a href="#" target="_blank">二挡时间</a></li>
+					</ul>
+					<ul>
+						<li><a href="#" target="_blank">二档战力</a></li>
+						<li><a href="#" target="_blank">二档仙力</a></li>
+					</ul>
+					<ul style="position: absolute;height: 20px;width: 150px;top: 40px;">
+						<li><a href="#" target="_blank">二档开发过程和经历</a></li>
+					</ul>
+			</div>
+		 <li class="guide_item">
+			<div class="title">三档</div>
+			<a href="" target="_blank">
+			  <img src="../images/index/唐凯豪，路飞三档.jpg" alt="">
+			</a>
+			<div class="guide_text">
+					 <ul>
+						<li><a href="#" target="_blank">三档外貌</a></li>
+						<li><a href="#" target="_blank">三档外貌</a></li>
+						<li><a href="#" target="_blank">三档外貌</a></li>
+					</ul>
+					<ul>
+						<li><a href="#" target="_blank">三档外貌</a></li>
+						<li><a href="#" target="_blank">三档外貌</a></li>
+						<li><a href="#" target="_blank">三档外貌</a></li>
+					 </ul>
+			</div> 
+		 </li>  
+		 <li class="guide_item">
+			<div class="title">四档</div>
+			<a href="" target="_blank">
+			  <img src="../images/index/唐凯豪，路飞四档.jpg" alt="">
+			</a>
+			<div class="guide_text">
+					 <ul>
+						<li><a href="#" target="_blank">四档外貌</a></li>
+						<li><a href="#" target="_blank">四档外貌</a></li>
+						<li><a href="#" target="_blank">四档外貌</a></li>
+					</ul>
+					<ul>
+						<li><a href="#" target="_blank">四档外貌</a></li>
+						<li><a href="#" target="_blank">四档外貌</a></li>
+						<li><a href="#" target="_blank">四档外貌</a></li>
+					 </ul>
+			</div> 
+		 </li> 
+		 <li class="guide_item">
+			<div class="title">五档</div>
+			<a href="" target="_blank">
+			  <img src="../images/index/唐凯豪，路飞五档.jpg" alt="">
+			</a>
+			<div class="guide_text">
+					 <ul>
+						<li><a href="#" target="_blank">五档外貌</a></li>
+						<li><a href="#" target="_blank">五档外貌</a></li>
+						<li><a href="#" target="_blank">五档外貌</a></li>
+					</ul>
+					<ul>
+						<li><a href="#" target="_blank">五档外貌</a></li>
+						<li><a href="#" target="_blank">五档外貌</a></li>
+						<li><a href="#" target="_blank">五档外貌</a></li>
+					 </ul>
+			</div> 
+		 </li> 
+		 <li class="guide_item">
+			<div class="title">无敌模式</div>
+			<a href="" target="_blank">
+			  <img src="../images/index/唐凯豪6.jpeg" alt="">
+			</a>
+			<div class="guide_text">
+					 <ul>
+						<li><a href="#" target="_blank">无敌模式外貌</a></li>
+						<li><a href="#" target="_blank">无敌模式外貌</a></li>
+						<li><a href="#" target="_blank">无敌模式外貌</a></li>
+					</ul>
+					<ul>
+						<li><a href="#" target="_blank">无敌模式外貌</a></li>
+						<li><a href="#" target="_blank">无敌模式外貌</a></li>
+						<li><a href="#" target="_blank">无敌模式外貌</a></li>
+					 </ul>
+			</div> 
+		 </li>    
+   </ul>
+   <div class="icon_left"><img src="../images/index/左箭头.png" alt=""></div>
+   <div class="icon_right"><img src="../images/index/右箭头.png" alt=""></div>
+</div>
+<script>
+	var icon_left=document.querySelector('.icon_left')
+	var icon_right=document.querySelector('.icon_right')
+	var guide_list=document.querySelector('.guide_list')
+	icon_right.addEventListener('click',function(){
+		guide_list.classList.add('move')
+	})
+	icon_left.addEventListener('click',function(){
+		guide_list.classList.remove('move')
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+.guide_box{
+    width: 1249px;
+    height: 500px;
+    /* background-color: aquamarine; */
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+    top: -2850px;
+    left: 5px;
+}
+.guide_title{
+    width: 430px;
+    height: 50px;
+    /* background-color: chartreuse; */
+    display: flex;
+    justify-content: space-around ;
+    margin: auto;
+}
+.guide_line{
+    width: 130px;
+    height: 20px;
+    /* background-color: blue; */
+    border-bottom: 2px solid rgb(60, 59, 59);
+}
+.guide_title p{
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(66, 64, 64);
+}
+.guide_list{
+    width: 1500px;
+    /* border: 2px solid; */
+    margin-left: -5px;
+    display: flex;
+    justify-content: space-evenly;   /* 拉手对齐 */
+    list-style: none;
+    /* 因为是该盒子在移动，所以过渡效果可以加在该盒子中 */
+    transition: all 0.5s ease;
+  
+}
+
+   
+
+.guide_item{
+    width: 220px;
+    height:380px;
+    background-color: rgb(76, 165, 200);
+   
+}
+.icon_left{
+    position: absolute;
+    top: 200px;
+    left: -5px;
+}
+.icon_right{
+    position: absolute;
+    top: 200px;
+    right: -5px;
+}
+.icon_left img,.icon_right img{
+     width: 30px;
+}
+.move{
+    transform: translateX(-245px);
+}
+/* 结构的代码 */
+.guide_list{
+    list-style: none;
+    display: flex;
+}
+.guide_item{
+    width: 220px;
+    height:380px;
+    background-color: white;
+   
+}
+.guide_item img{
+    width: 220px;
+    height:300px;
+    object-fit: cover;
+}
+.guide_text {
+ width: 220px;
+ height: 80px;
+ margin-top: -5px;
+ /* border: 3px solid; */
+ display: flex;
+ justify-content:space-between;
+}
+.guide_text ul {
+    width: 90px;
+    height: 80px;
+    /* background-color: brown; */
+    box-sizing: border-box;
+    padding:8px;
+    margin-right: 20px;
+   
+}
+.guide_text a{
+    font-size: 10px;
+    color: rgb(48, 47, 47);
+    text-decoration: none;
+}
+.guide_text a:hover{
+    color: rgb(22, 155, 207);
+}
+
+.guide_text ul li{
+ 
+    list-style-position: inside;
+    margin-left: 0px;
+    list-style-type: square;
+    font-size: 10px;
+    color: rgb(22, 155, 207);
+    line-height: 20px;
+}
+.guide_item{
+    position: relative;
+}
+.guide_item .title{
+   position: absolute;
+   left: 20px;
+   top: 10px;
+   color: aliceblue;
+   font-size: 20px;
+   font-weight: bold;
+}

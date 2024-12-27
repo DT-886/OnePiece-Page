@@ -1,0 +1,139 @@
+.tkh-guide_box{
+    width: 1249px;
+    height: 500px;
+    /* background-color: aquamarine; */
+    position: relative;
+    overflow: hidden;
+}
+.tkh-guide_title{
+    width: 430px;
+    height: 50px;
+    /* background-color: chartreuse; */
+    display: flex;
+    justify-content: space-around ;
+    justify-self: center; /* 水平方向居中 */
+}
+.tkh-guide_title p{
+    margin-top: 20px;
+}
+.tkh-guide_line{
+    width: 130px;
+    height: 20px;
+    /* background-color: blue; */
+    border-bottom: 2px solid rgb(60, 59, 59);
+    margin-top: 20px;
+}
+.tkh-guide_title p{
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(66, 64, 64);
+}
+
+.tkh-box-big{
+    width: 1120px;
+    height: 660px;
+    position: relative;
+    margin-top: 10px;
+    justify-self: center; /* 水平方向居中 */
+}
+.tkh-box:hover{
+    border: 1px solid rgb(191, 27, 27);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.tkh-box-lf{
+    width: 200px;
+    height: 300px;
+    transition: all 0.6s;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+.tkh-box-sl{
+    width: 200px;
+    height: 300px;
+    transition: all 0.6s;
+    position: relative;
+    top: -280px;
+    left: 240px;
+}
+.tkh-box-sz{
+    width: 200px;
+    height: 300px;
+    transition: all 0.6s;
+    position: relative;
+    top: -580px;
+    left: 460px;
+}
+.tkh-box-qb{
+    width: 200px;
+    height: 300px;
+    transition: all 0.6s;
+    position: relative;
+    top: -880px;
+    left: 680px;
+}
+.tkh-box-nm{
+    width: 200px;
+    height: 300px;
+    transition: all 0.6s;
+    position: relative;
+    top: -1180px;
+    left: 900px;
+}
+.tkh-box-blk{
+    width: 200px;
+    height: 300px;
+    transition: all 0.6s;
+    position: relative;
+    top: -1160px;
+    left: 20px;
+}
+.tkh-box-sp{
+    width: 200px;
+    height: 300px;
+    transition: all 0.6s;
+    position: relative;
+    top: -1460px;
+    left: 240px;
+}
+.tkh-box-flk{
+    width: 200px;
+    height: 300px;
+    transition: all 0.6s;
+    position: relative;
+    top: -1760px;
+    left: 460px;
+}
+.tkh-box-wsp{
+    width: 200px;
+    height: 300px;
+    transition: all 0.6s;
+    position: relative;
+    top: -2060px;
+    left: 680px;
+}
+.tkh-box-lb{
+    width: 200px;
+    height: 300px;
+    transition: all 0.6s;
+    position: relative;
+    top: -2360px;
+    left: 900px;
+}
+.tkh-box-img{
+    width: 200px;
+    height: 230px;
+}
+.tkh-box-word-name{
+    color: black;
+    position: absolute;
+    top: 240px;
+    left: 80px;
+}
+.tkh-box-word-js{
+    color: black;
+    position: absolute;
+    top: 270px;
+    left: 20px;
+}
